@@ -1,0 +1,19 @@
+.wrapper {
+  margin: 1rem;
+  color: white;
+}
+
+header {
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+
+.cards {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(2, 400px);
+  gap: 30px;
+}
