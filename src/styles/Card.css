@@ -6,8 +6,19 @@
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
+  background-color: rgb(0, 119, 255);
+  box-shadow: 4px 4px 8px rgb(131, 130, 192);
 }
 
 img {
   width: 200%;
+}
+
+.card:hover {
+  transition: 0.2s ease-out;
+  transform: translate(0px, -20px);
+}
+
+.card:active {
+  background-color: blue;
 }
