@@ -14,7 +14,7 @@ function Card({ pokeName }) {
 
   return (
     <div className="card">
-      <h3>{pokeName}</h3>
+      <h3>{pokeName.charAt(0).toUpperCase() + pokeName.slice(1)}</h3>
       <img src={pokemon} alt={pokeName + " sprite"} />
     </div>
   );
