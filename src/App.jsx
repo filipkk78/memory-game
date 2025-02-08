@@ -15,18 +15,18 @@ function App() {
           you click on one that you've already clicked on before
         </h2>
         <div className="cards">
-          <Card></Card>
-          <Card></Card>
-          <Card></Card>
-          <Card></Card>
-          <Card></Card>
-          <Card></Card>
-          <Card></Card>
-          <Card></Card>
-          <Card></Card>
-          <Card></Card>
-          <Card></Card>
-          <Card></Card>
+          <Card pokeName={"ditto"}></Card>
+          <Card pokeName={"ekans"}></Card>
+          <Card pokeName={"pikachu"}></Card>
+          <Card pokeName={"geodude"}></Card>
+          <Card pokeName={"snorlax"}></Card>
+          <Card pokeName={"charmander"}></Card>
+          <Card pokeName={"rattata"}></Card>
+          <Card pokeName={"squirtle"}></Card>
+          <Card pokeName={"bulbasaur"}></Card>
+          <Card pokeName={"jigglypuff"}></Card>
+          <Card pokeName={"zubat"}></Card>
+          <Card pokeName={"psyduck"}></Card>
         </div>
       </main>
     </div>
