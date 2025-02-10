@@ -1,11 +1,33 @@
 import "./styles/App.css";
 import Score from "./components/Score";
 import Card from "./components/Card";
+import { useState } from "react";
 
 function App() {
+  const [pokeArr, setPokeArr] = useState([
+    "ditto",
+    "ekans",
+    "pikachu",
+    "geodude",
+    "snorlax",
+    "charmander",
+    "rattata",
+    "squirtle",
+    "bulbasaur",
+    "jigglypuff",
+    "zubat",
+    "psyduck",
+  ]);
+  function randomizePokeArr() {
+    const newPokeArr = [...pokeArr];
+    newPokeArr.sort(() => 0.5 - Math.random());
+    setPokeArr(newPokeArr);
+    console.log(pokeArr);
+  }
+
   return (
     <div className="wrapper">
-      <header>
+      <header onClick={randomizePokeArr}>
         <h1>Pokémon Memory Game</h1>
         <Score></Score>
       </header>
@@ -15,18 +37,18 @@ function App() {
           you click on one that you've already clicked on before
         </h2>
         <div className="cards">
-          <Card pokeName={"ditto"}></Card>
-          <Card pokeName={"ekans"}></Card>
-          <Card pokeName={"pikachu"}></Card>
-          <Card pokeName={"geodude"}></Card>
-          <Card pokeName={"snorlax"}></Card>
-          <Card pokeName={"charmander"}></Card>
-          <Card pokeName={"rattata"}></Card>
-          <Card pokeName={"squirtle"}></Card>
-          <Card pokeName={"bulbasaur"}></Card>
-          <Card pokeName={"jigglypuff"}></Card>
-          <Card pokeName={"zubat"}></Card>
-          <Card pokeName={"psyduck"}></Card>
+          <Card pokeName={pokeArr[0]}></Card>
+          <Card pokeName={pokeArr[1]}></Card>
+          <Card pokeName={pokeArr[2]}></Card>
+          <Card pokeName={pokeArr[3]}></Card>
+          <Card pokeName={pokeArr[4]}></Card>
+          <Card pokeName={pokeArr[5]}></Card>
+          <Card pokeName={pokeArr[6]}></Card>
+          <Card pokeName={pokeArr[7]}></Card>
+          <Card pokeName={pokeArr[8]}></Card>
+          <Card pokeName={pokeArr[9]}></Card>
+          <Card pokeName={pokeArr[10]}></Card>
+          <Card pokeName={pokeArr[11]}></Card>
         </div>
       </main>
     </div>
