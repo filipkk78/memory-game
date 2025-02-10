@@ -1,7 +1,7 @@
 import "../styles/Card.css";
 import { useState, useEffect } from "react";
 
-function Card({ pokeName }) {
+function Card({ pokeName, handleScore }) {
   const [pokemon, setPokemon] = useState(null);
   const [pokeKey, setPokeKey] = useState(null);
   useEffect(() => {
@@ -14,8 +14,12 @@ function Card({ pokeName }) {
       .catch((error) => console.error(error));
   }, [pokeName]);
 
+  function handleChoice() {
+    handleScore(pokeKey);
+  }
+
   return (
-    <div className="card" key={pokeKey}>
+    <div className="card" key={pokeKey} onClick={handleChoice}>
       <h3>{pokeName.charAt(0).toUpperCase() + pokeName.slice(1)}</h3>
       <img src={pokemon} alt={pokeName + " sprite"} />
     </div>
