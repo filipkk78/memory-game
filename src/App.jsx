@@ -31,6 +31,7 @@ export default function App() {
   function handleScore(id) {
     if (chosen.includes(id)) {
       setScore(0);
+      setChosen([]);
       return;
     }
     setChosen([...chosen, id]);
